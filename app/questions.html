@@ -1,0 +1,33 @@
+<div class="container">
+	<div class="hider">
+		<div id="form-wrap">
+			
+			<div ng-hide = "complete" class="question"> <!--QUESTION ONE-->
+					<div class="col-xs-12">
+						<h1>{{display}}</h1>
+					</div>
+					<div class="col-xs-10">
+						<input ng-model = "answer"></input>
+					</div>
+					<div class="col-xs-2">
+						<button ng-click = 'nextQ()' class="btn next-btn">
+							<i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</button>
+					</div>
+					<div class="col-xs-12 indicator">
+						<p>question {{currentQuestion}} / {{numOfQuestions}}</p>
+					</div>
+				</div>
+			
+
+			<!-- 	<div ng-hide = "complete" class="completed"> 
+					<div class="col-xs-12"><h1>Submitted</h1></div>
+				</div> -->
+				<div ng-show = "complete" class = "completed">
+					<div class = "col-xs-12"><h1>Completed</h1></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="progress-bar"></div>
