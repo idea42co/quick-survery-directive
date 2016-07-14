@@ -2,31 +2,29 @@
 	angular.module('Questions', [])
 	.controller('MainCtrl', ['$scope', function($scope){
 
-		$scope.currentQuestion = 1;
-
-
+		$scope.currentQuestion = 0;
 
 		$scope.complete = false;
 
-		$scope.set = []// Define all question here comma seperated
+		$scope.qSet = ['wtest', 'atest', 'ctest', 'btest']// Define all question here comma seperated
 
+		$scope.questions = {}//Your questions data structure will be built here
 
-
-		//input your questions here
-		$scope.questions = {}
-
-		$scope.numOfQuestions = Object.keys($scope.questions).length
-
+		setQuestionStruct()
 
 		$scope.display = $scope.questions[$scope.currentQuestion];
 
-
-
 		$scope.nextQ = function(answer){
-			var progressBar = 100 / $scope.numOfQuestions;
 
-			$scope.questions[$scope.currentQuestion].A = answer
+			if (!answer){
+				answer = "N/A"
+			}// if answer provided is blank
 
+			var progressBar = 100 / $scope.numOfQuestions;//figure out how much to progress the bar after eah submitted question.
+
+			$scope.questions[$scope.currentQuestion].A = answer// adds answer to data structure
+			console.log($scope.currentQuestion);
+			console.log($scope.numOfQuestions);
 			if ($scope.currentQuestion < $scope.numOfQuestions){
 				$scope.currentQuestion += 1;
 			} 
@@ -37,7 +35,9 @@
 				$scope.complete = true;
 				return;
 			}
+
 			$scope.display = $scope.questions[$scope.currentQuestion]; //changes display
+			console.log($scope.display)
 			
 			$scope.answer = ""; //clears input on next question
 
@@ -53,10 +53,10 @@
 		}
 
 
-		(function(){
-			$.each($scope.set, function( index, value){$scope.questions[index] = {Q: value, A: ""}})
-			console.log($scope.questions);
-		}()) // Build question data structure
+		function setQuestionStruct(){
+			$.each($scope.qSet, function(index, value){$scope.questions[index ] = {Q: value, A: ""}})
+			$scope.numOfQuestions = Object.keys($scope.questions).length
+		}
 
 	}])
 
@@ -65,12 +65,7 @@
 			restrict: "E",
 			templateUrl: "app/questions.html"
 		}
-	});
-
-
-
-	//set progress bar first!!
-
+	})
 	
 }())
 
