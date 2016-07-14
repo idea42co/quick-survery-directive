@@ -26,9 +26,20 @@
 
 		$scope.nextQ = function(){
 			var progressBar = 100 / $scope.numOfQuestions;
+
+			if($scope.currentQuestion === 1){
+				$('.progress-bar').animate({
+		  	 		'marginLeft' : "+="  + progressBar + "%"
+			 	});
+			}
+
 			if ($scope.currentQuestion < $scope.numOfQuestions + 1){
 				$scope.currentQuestion += 1;
-			} else {
+			} 
+			else if ($scope.currentQuestion === $scope.numOfQuestions) {
+				
+			}
+			else {
 				console.log('done');
 				$scope.complete = true;
 				return;
@@ -39,10 +50,7 @@
 				'marginTop' : "-=148px"
 			})
 			$('#form-wrap').animate({
-				'marginTop' : "+=296px"
-			})
-			$('#form-wrap').animate({
-				'marginTop' : "-=148px"
+				'marginTop' : "+=148px"
 			})
 			$('.progress-bar').animate({
 		  	 'marginLeft' : "+="  + progressBar + "%"
