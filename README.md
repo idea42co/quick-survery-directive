@@ -1,6 +1,6 @@
 ![alt text](https://github.com/idea42co/images/blob/master/FullLogo-Colored-2000x779.jpg "Logo Title Text 1")
 
-#DirectiveSurvey
+#Directive Survey
 An animated survey built with an Angular directive
 
 ##Usage
