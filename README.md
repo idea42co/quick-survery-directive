@@ -1,3 +1,5 @@
+![alt text](https://github.com/idea42co/images/blob/master/FullLogo-Colored-2000x779.jpg "Logo Title Text 1")
+
 #DirectiveSurvey
 An animated survey built with an Angular directive
 
@@ -14,4 +16,4 @@ array and seperate them by commas
 object along with the question  
 
 
-![alt text](https://github.com/idea42co/images/blob/master/FullLogo-Colored-2000x779.jpg "Logo Title Text 1")
+
