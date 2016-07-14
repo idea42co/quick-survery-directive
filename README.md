@@ -6,7 +6,7 @@ An animated survey built with an Angular directive
 ##Usage
 - Define all questions in the array
 ```javascript
-    $scope.set = [];
+    $scope.qSet = [];
 ```
 and seperate them by commas
 - All answers to the survey will be stored in the object
