@@ -1,17 +1,19 @@
-#DirectiveSurvey
+![alt text](https://github.com/idea42co/images/blob/master/FullLogo-Colored-2000x779.jpg "Logo Title Text 1")
+
+#Directive Survey
 An animated survey built with an Angular directive
 
 ##Usage
-- Define all questions in the
+- Define all questions in the array
 ```javascript
-    $scope.set = [];
+    $scope.qSet = [];
 ```
-array and seperate them by commas
-- All answers to the survey will be stored in the 
+and seperate them by commas
+- All answers to the survey will be stored in the object
 ```javascript
     $scope.questions = {};
 ```
-object along with the question  
+along with the question  
 
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1"): 
+
