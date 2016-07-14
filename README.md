@@ -10,16 +10,22 @@ An animated survey built with an Angular directive. Quicky build a survey with c
 ```
 and seperate them by commas
 
+
+
 - Initiate the survey by placing this custom html template:
 ```html
     <survey></survey>
 ```
+
+
 
 - All answers to the survey will be stored in the object
 ```javascript
     $scope.questions = {};
 ```
 along with the question. 
+
+
 
 - Here's an example of the data structure the answers are stored in.
 ```javascript
