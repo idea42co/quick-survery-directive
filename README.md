@@ -10,7 +10,7 @@ An animated survey built with an Angular directive. Quicky build a survey with c
 ```
 and seperate them by commas
 
-- Initiate the survey by placing the custom html template:
+- Initiate the survey by placing this custom html template:
 ```html
     <survey></survey>
 ```
