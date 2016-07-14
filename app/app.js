@@ -8,13 +8,12 @@
 
 		$scope.complete = false;
 
+		$scope.set = []// Define all question here comma seperated
+
+
+
 		//input your questions here
-		$scope.questions = {
-			"1": {Q: 'Jon Lehman is the man',A: ""},
-			"2": {Q:'I wish I was Jon Lehman', A: ""},
-			"3": {Q:'Jon Lehman vs Everybody',A: ""},
-			"4": {Q:'Go Idea42!',A:""}
-		}
+		$scope.questions = {}
 
 		$scope.numOfQuestions = Object.keys($scope.questions).length
 
@@ -52,6 +51,13 @@
 		  	 'marginLeft' : "+="  + progressBar + "%"
 			 });
 		}
+
+
+		(function(){
+			$.each($scope.set, function( index, value){$scope.questions[index] = {Q: value, A: ""}})
+			console.log($scope.questions);
+		}()) // Build question data structure
+
 	}])
 
 	.directive('survey', function(){
