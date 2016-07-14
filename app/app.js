@@ -1,12 +1,14 @@
 (function(){
 	angular.module('Questions', [])
-	.controller('MainCtrl', ['$scope', function($scope){
+	.controller('MainCtrl', ['$scope', 'Animation', function($scope, Animation){
 
-		$scope.currentQuestion = 0;
+		$scope.currentQuestion = 1;
 
 		$scope.complete = false;
 
-		$scope.qSet = ['wtest', 'atest', 'ctest', 'btest']// Define all question here comma seperated
+		$scope.empty = false;
+
+		$scope.qSet = []// Define all question here comma seperated
 
 		$scope.questions = {}//Your questions data structure will be built here
 
@@ -23,8 +25,7 @@
 			var progressBar = 100 / $scope.numOfQuestions;//figure out how much to progress the bar after eah submitted question.
 
 			$scope.questions[$scope.currentQuestion].A = answer// adds answer to data structure
-			console.log($scope.currentQuestion);
-			console.log($scope.numOfQuestions);
+
 			if ($scope.currentQuestion < $scope.numOfQuestions){
 				$scope.currentQuestion += 1;
 			} 
@@ -32,15 +33,38 @@
 				$('.progress-bar').animate({
 		  	 		'marginLeft' : "+="  + progressBar + "%"
 				 });
+
 				$scope.complete = true;
+
+				Animation.animate();
+
 				return;
 			}
 
 			$scope.display = $scope.questions[$scope.currentQuestion]; //changes display
-			console.log($scope.display)
 			
 			$scope.answer = ""; //clears input on next question
 
+			Animation.animate(progressBar);
+		}
+
+
+		function setQuestionStruct(){
+			$.each($scope.qSet, function(index, value){$scope.questions[index + 1] = {Q: value, A: ""}})
+			$scope.numOfQuestions = Object.keys($scope.questions).length
+		}
+
+	}])
+
+	.directive('survey', function(){
+		return {
+			restrict: "E",
+			templateUrl: "app/questions.html"
+		}
+	})
+
+	.service('Animation', function(){
+		this.animate = function(progressBar){
 			$('#form-wrap').animate({
 				'marginTop' : "-=148px"
 			})
@@ -52,18 +76,8 @@
 			 });
 		}
 
-
-		function setQuestionStruct(){
-			$.each($scope.qSet, function(index, value){$scope.questions[index ] = {Q: value, A: ""}})
-			$scope.numOfQuestions = Object.keys($scope.questions).length
-		}
-
-	}])
-
-	.directive('survey', function(){
-		return {
-			restrict: "E",
-			templateUrl: "app/questions.html"
+		this.progress = function(numOfQuestions){
+			return 100 / numOfQuesitons
 		}
 	})
 	
