@@ -4,13 +4,13 @@
 			
 			<div ng-hide = "complete" class="question"> <!--QUESTION ONE-->
 					<div class="col-xs-12">
-						<h1>{{display}}</h1>
+						<h1>{{display.Q}}</h1>
 					</div>
 					<div class="col-xs-10">
 						<input ng-model = "answer"></input>
 					</div>
 					<div class="col-xs-2">
-						<button ng-click = 'nextQ()' class="btn next-btn">
+						<button ng-click = 'nextQ(answer)' class="btn next-btn">
 							<i class="fa fa-arrow-right" aria-hidden="true"></i>
 						</button>
 					</div>
