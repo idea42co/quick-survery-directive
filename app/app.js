@@ -16,9 +16,6 @@
 
 		$scope.numOfQuestions = Object.keys($scope.questions).length
 
-		console.log($scope.numOfQuestions)
-
-
 
 		$scope.display = $scope.questions[$scope.currentQuestion];
 
@@ -27,20 +24,10 @@
 		$scope.nextQ = function(){
 			var progressBar = 100 / $scope.numOfQuestions;
 
-			if($scope.currentQuestion === 1){
-				$('.progress-bar').animate({
-		  	 		'marginLeft' : "+="  + progressBar + "%"
-			 	});
-			}
-
-			if ($scope.currentQuestion < $scope.numOfQuestions + 1){
+			if ($scope.currentQuestion < $scope.numOfQuestions){
 				$scope.currentQuestion += 1;
 			} 
-			else if ($scope.currentQuestion === $scope.numOfQuestions) {
-				
-			}
 			else {
-				console.log('done');
 				$scope.complete = true;
 				return;
 			}
@@ -57,6 +44,21 @@
 			 });
 		}
 
+
+		$(document).ready(function(){
+				function progressBar(){
+					var progressBar = 100 / $scope.numOfQuestions;
+					console.log($scope.numOfQuestions)
+					console.log(progressBar);
+					console.log('figure out how to set progress bar correctly');
+					console.log($('.progress-bar'))
+					$('.progress-bar').animate({
+				  	 'marginLeft' : "+="  + progressBar + "%"
+					 });
+				}
+				progressBar();
+
+		})
 	}])
 
 	.directive('survey', function(){
@@ -65,6 +67,7 @@
 			templateUrl: "app/questions.html"
 		}
 	});
+
 
 
 	//set progress bar first!!
