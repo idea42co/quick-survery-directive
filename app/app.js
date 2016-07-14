@@ -52,7 +52,17 @@
 		function setQuestionStruct(){
 			$.each($scope.qSet, function(index, value){$scope.questions[index + 1] = {Q: value, A: ""}})
 			$scope.numOfQuestions = Object.keys($scope.questions).length
+
+			if ($scope.currentQuestion > $scope.numOfQuestions){
+				$scope.empty = true;
+			}
 		}
+
+		// function emptyQSetCheck(){
+		// 	if ($scope.currentQuestion > $scope.numOfQuestions){
+		// 		$scope.empty = true;
+		// 	}
+		// }
 
 	}])
 
