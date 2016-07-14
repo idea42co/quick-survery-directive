@@ -4,16 +4,16 @@
 An animated survey built with an Angular directive
 
 ##Usage
-- Define all questions in the
+- Define all questions in the array
 ```javascript
     $scope.set = [];
 ```
-array and seperate them by commas
-- All answers to the survey will be stored in the 
+and seperate them by commas
+- All answers to the survey will be stored in the object
 ```javascript
     $scope.questions = {};
 ```
-object along with the question  
+along with the question  
 
 
 
