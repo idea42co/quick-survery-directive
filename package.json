@@ -1,11 +1,14 @@
 {
-  "name": "questions",
+  "name": "quick-survey-generator",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "licenses": [{
+		"type": "MIT",
+		"url": "https://github.com/idea42co/quick-survery-generator/blob/master/License.md"
+	}],
+  "author": "Ryan Lesson"
 }

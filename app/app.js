@@ -1,5 +1,5 @@
 (function(){
-	angular.module('Questions', [])
+	angular.module('quickSurveyGenerator', [])
 	.controller('MainCtrl', ['$scope', 'Animation', function($scope, Animation){
 
 		$scope.currentQuestion = 1;
@@ -57,12 +57,6 @@
 				$scope.empty = true;
 			}
 		}
-
-		// function emptyQSetCheck(){
-		// 	if ($scope.currentQuestion > $scope.numOfQuestions){
-		// 		$scope.empty = true;
-		// 	}
-		// }
 
 	}])
 
