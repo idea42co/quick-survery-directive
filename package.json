@@ -6,9 +6,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "licenses": [{
-		"type": "MIT",
-		"url": "https://github.com/idea42co/quick-survery-generator/blob/master/License.md"
-	}],
-  "author": "Ryan Lesson"
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/idea42co/quick-survery-generator/blob/master/License.md"
+    }
+  ],
+  "author": "Ryan Lesson",
+  "devDependencies": {
+    "angular-mock": "^1.0.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.3.0",
+    "karma": "^1.1.1",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^1.1.1",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "mocha": "^2.5.3"
+  }
 }

@@ -1,6 +1,7 @@
 (function(){
+
 	angular.module('quickSurveyGenerator', [])
-	.controller('MainCtrl', ['$scope', 'Animation', function($scope, Animation){
+	.controller('SurveyController', ['$scope', 'Animation', function($scope, Animation){
 
 		$scope.currentQuestion = 1;
 
@@ -8,11 +9,19 @@
 
 		$scope.empty = false;
 
-		$scope.qSet = []// Define all question here comma seperated
+		$scope.qSet = ['test', 'testinggg']// Define all question here comma seperated
 
 		$scope.questions = {}//Your questions data structure will be built here
 
-		setQuestionStruct()
+		$scope.setQuestionStruct = function(){
+			$.each($scope.qSet, function(index, value){$scope.questions[index + 1] = {Q: value, A: ""}})
+			$scope.numOfQuestions = Object.keys($scope.questions).length
+
+			if ($scope.currentQuestion > $scope.numOfQuestions){
+				$scope.empty = true;
+			}
+		}
+		$scope.setQuestionStruct()
 
 		$scope.display = $scope.questions[$scope.currentQuestion];
 
@@ -49,14 +58,14 @@
 		}
 
 
-		function setQuestionStruct(){
-			$.each($scope.qSet, function(index, value){$scope.questions[index + 1] = {Q: value, A: ""}})
-			$scope.numOfQuestions = Object.keys($scope.questions).length
+		// function setQuestionStruct(){
+		// 	$.each($scope.qSet, function(index, value){$scope.questions[index + 1] = {Q: value, A: ""}})
+		// 	$scope.numOfQuestions = Object.keys($scope.questions).length
 
-			if ($scope.currentQuestion > $scope.numOfQuestions){
-				$scope.empty = true;
-			}
-		}
+		// 	if ($scope.currentQuestion > $scope.numOfQuestions){
+		// 		$scope.empty = true;
+		// 	}
+		// }
 
 	}])
 
