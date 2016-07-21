@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app = "quickSurveyGenerator">
+<html ng-app = "Test">
 	<head>
 		<title>Questions</title>
 		<script src = "bower_components/jquery/dist/jquery.min.js"></script>
@@ -9,10 +9,11 @@
 		<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="app/main.css">
 		<script src = "app/app.js"></script>
+		<script src = "app/test.js"></script>
 	</head>
-	<body ng-controller = "SurveyController">
+	<body ng-controller = 'TestController'>
 
-		<survey></survey>
+		<survey ng-attr-questions = "questionSet"></survey>
 
 	</body>
 </html>
