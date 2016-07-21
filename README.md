@@ -6,6 +6,9 @@ An animated survey built with an Angular directive. Quicky build a survey with c
 ##Usage
 - To use just include 'quickSurveyGenerator' as a dependency in your angualr module
 
+##Example UI
+![alt text](https://github.com/idea42co/images/blob/master/Screen%20Shot%202016-07-21%20at%203.50.17%20PM.png)
+
 - Define all questions within your controller in an array in this structure
 ```javascript
     $scope.questionSet = [
@@ -20,9 +23,6 @@ An animated survey built with an Angular directive. Quicky build a survey with c
 ```html
     <survey ng-attr-questions = "questionSet></survey>
 ```
-
-##Model
-![alt text](https://github.com/idea42co/images/blob/master/Screen%20Shot%202016-07-21%20at%203.50.17%20PM.png)
 
 
 
