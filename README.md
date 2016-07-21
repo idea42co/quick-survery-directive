@@ -21,6 +21,9 @@ An animated survey built with an Angular directive. Quicky build a survey with c
     <survey ng-attr-questions = "questionSet></survey>
 ```
 
+##Model
+![alt text](https://github.com/idea42co/images/blob/master/Screen%20Shot%202016-07-21%20at%203.50.17%20PM.png)
+
 
 
 ##Saving to a database
