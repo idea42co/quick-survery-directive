@@ -4,37 +4,30 @@
 An animated survey built with an Angular directive. Quicky build a survey with cool animations and reponsiveness.
 
 ##Usage
-- Define all questions in the array
+- To use just include 'quickSurveyGenerator' as a dependency in your angualr module
+
+- Define all questions within your controller in an array in this structure
 ```javascript
-    $scope.qSet = [];
+    $scope.questionSet = [
+        {Q: "test1", A: ""},
+        {Q: "test2", A: ""},
+        {Q: "test3", A: ""},
+        {Q: "Is Jon the man?", A: ""}
+    ]
 ```
-and seperate them by commas
-
-
 
 - Initiate the survey by placing this custom html template:
 ```html
-    <survey></survey>
+    <survey ng-attr-questions = "questionSet></survey>
 ```
 
 
 
-- All answers to the survey will be stored in the object
-```javascript
-    $scope.questions = {};
-```
-along with the question. 
+##Saving to a database
+- To save to a databas simply set up a $watch on the $scope.questionSet and save to the database 
+everytime the answer is updated since it is two way bound.
 
 
-##Example
-- Here's an example of the data structure the answers are stored in.
-```javascript
-    {
-    "1":{Q:"example question", A: "test"},
-    "2":{Q:"another example", A: "testing"},
-    "3":{Q:"You understand now?", A: "Yes!"}
-    }
-```
-
-
+##Custom Configuration
+-All styling custom configuration can be found in the main.css file in the app folder
 
