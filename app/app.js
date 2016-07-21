@@ -1,11 +1,6 @@
 (function(){
 
 	angular.module('quickSurveyGenerator', [])
-	.controller('SurveyController', ['$scope', 'Animation', function($scope, Animation){
-
-		
-	}])
-
 	.directive('survey', function(){
 
 		return {
@@ -34,7 +29,7 @@
 
 					var progressBar = 100 / $scope.numOfQuestions;//figure out how much to progress the bar after each submitted question.
 
-					$scope.questions[$scope.currentQuestion].A = answer// adds answer to data structure
+					$scope.questions[$scope.currentQuestion -1].A = answer// adds answer to data structure
 
 					if ($scope.currentQuestion < $scope.numOfQuestions){
 						$scope.currentQuestion += 1;
@@ -51,7 +46,7 @@
 						return;
 					}
 
-					$scope.display = $scope.questionsSet[$scope.currentQuestion]; //changes display
+					$scope.display = $scope.questions[$scope.currentQuestion -1]; //changes display
 					
 					$scope.answer = ""; //clears input on next question
 
