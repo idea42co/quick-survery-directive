@@ -1,6 +1,6 @@
 {
   "name": "quick-survey-directive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An easy to use survey created with an Angular directive",
   "main": "dist/quick-survey.js",
   "scripts": {
@@ -13,10 +13,10 @@
     }
   ],
   "keywords": [
-      "quick",
-      "survey",
-      "directive",
-      "angular"
+    "quick",
+    "survey",
+    "directive",
+    "angular"
   ],
   "author": "Ryan Lesson",
   "devDependencies": {
