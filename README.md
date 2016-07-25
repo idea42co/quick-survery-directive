@@ -16,7 +16,7 @@ An animated survey built with an Angular directive. Quicky build a survey with c
 
 ##Usage
 - To use just include `quickSurveyDirective` as a dependency in your angualar module
-```angular
+```javascript
 	angular.module('Example', ['quickSurveyDirective'])
 ```
 
