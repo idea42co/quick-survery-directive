@@ -90,7 +90,7 @@
 
 			link : function(scope, ele, attr){
 				//compile the elements on the DOM that isn't listened to 
-				scope.$watch(attrs.dynamic, function(html) {
+				scope.$watch(attr.dynamic, function(html) {
         			ele.html(html);
         			$compile(ele.contents())(scope);
      			 });
