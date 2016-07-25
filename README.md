@@ -1,5 +1,9 @@
 ![alt text](https://github.com/idea42co/images/blob/master/FullLogo-Colored-2000x779.jpg "Logo Title Text 1")
 
+#Instalation
+
+npm install quick-survey-generator
+
 #Directive Survey
 An animated survey built with an Angular directive. Quicky build a survey with cool animations and reponsiveness.
 
