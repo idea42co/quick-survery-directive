@@ -5,6 +5,11 @@
 ```sh
 npm install quick-survey-generator
 ```
+Then include the following files:
+```html
+	<script type="text/javascript" src = "node_modules/quick-survey-directive/dist/quick-survey.js"></script>
+	<link rel="stylesheet" type="text/css" href="node_modules/quick-survey-directive/dist/main.css">
+```
 
 #Directive Survey
 An animated survey built with an Angular directive. Quicky build a survey with cool animations and reponsiveness.
