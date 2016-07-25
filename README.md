@@ -47,8 +47,8 @@ on a page refresh.
 
 
 ##Custom Configuration
--All styling custom configuration can be found in the `main.css`file in the app folder
+- All styling custom configuration can be found in the `main.css`file in the app folder
 
 ##Testing
--While this project was created in a short amount of time frame. Tests haven't fully been written yet. However, I hope to have them done in the next week or so!
+- While this project was created in a short amount of time frame. Tests haven't fully been written yet. However, I hope to have them done in the next week or so!
 
