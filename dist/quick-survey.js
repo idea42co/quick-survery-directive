@@ -1,44 +1,44 @@
-(function(angular){
+(function(){
 
 	angular.module('quickSurveyDirective', [])
 	.directive('survey', function(){
 
 		return {
 			restrict: "E",
-			template: "<div class='container'>
-							<div class='hider'>
-								<div id='form-wrap'>
-			
-									<div ng-hide = 'complete' class='question'> <!--QUESTION ONE-->
-										<div class='col-xs-12'>
-											<h1>{{display.Q}}</h1>
-										</div>
-									<div class='col-xs-10'>
-										<input ng-model = 'answer'></input>
-									</div>
-									<div class='col-xs-2'>
-										<button ng-click = 'nextQ(answer)' class='btn next-btn'>
-										<i class='fa fa-arrow-right' aria-hidden='true'></i>
-										</button>
-									</div>
-									<div class='col-xs-12 indicator'>
-										<p>question {{currentQuestion}} / {{numOfQuestions}}</p>
-									</div>
-								<div class='progress-bar'></div>
-							</div>
-				
-							<div ng-show = 'complete' class = 'completed'>
-								<div class = 'col-xs-12'><h1>Completed</h1></div>
-								<div class='progress-bar'></div>
-							</div>
+			 replace: true,
+			template: '<div class="container">' +
+							'<div class="hider">' +
+								'<div id="form-wrap">' +
+									'<div ng-hide = "complete" class = "question">'+
+										'<div class="col-xs-12">'+
+											'<h1>{{display.Q}}</h1>'+
+										'</div>'+
+									'<div class="col-xs-10">' +
+										'<input ng-model = "answer"></input>' +
+									'</div>' +
+					'<div class="col-xs-2">' +
+						'<button ng-click = "nextQ(answer)"" class="btn next-btn">' +
+							'<i class="fa fa-arrow-right" aria-hidden="true"></i>' +
+									'</button>' +
+								'</div>' +
+								'<div class="col-xs-12 indicator">' +
+									'<p>question {{currentQuestion}} / {{numOfQuestions}}</p>' +
+								'</div>' +
+								'<div class="progress-bar"></div>' +
+						'</div>' +
+						
+							'<div ng-show = "complete" class = "completed">' +
+								'<div class = "col-xs-12"><h1>Completed</h1></div>' +
+								'<div class="progress-bar"></div>' +
+							'</div>' +
 
-							<div ng-show = 'empty' class = 'empty'>
-								<div class = 'col-xs-12'><h1>Please fill out some questions</h1></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>",
+							'<div ng-show = "empty" class = "empty">' +
+								'<div class = "col-xs-12"><h1>Please fill out some questions</h1></div>' +
+							'</div>'+
+						'</div>' +
+					'</div>' +
+				'</div>' +
+			'</div>',
 			scope: {
 				questions: '='
 			},
@@ -86,7 +86,17 @@
 					Animation.animate(progressBar);
 				}
 
-			}]
+			}],
+
+			link : function(scope, ele, attr){
+				//compile the elements on the DOM that isn't listened to 
+				scope.$watch(attrs.dynamic, function(html) {
+        			ele.html(html);
+        			$compile(ele.contents())(scope);
+     			 });
+			}
+
+
 		}
 	})
 
@@ -108,7 +118,7 @@
 		}
 	})
 	
-}(angular))
+}())
 
 
 
