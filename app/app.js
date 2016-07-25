@@ -1,6 +1,6 @@
 (function(){
 
-	angular.module('quickSurveyGenerator', [])
+	angular.module('quickSurveyDirective', [])
 	.directive('survey', function(){
 
 		return {

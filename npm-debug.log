@@ -1,0 +1,90 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'publish',
+1 verbose cli   'quick-survey-directive' ]
+2 info using npm@3.9.2
+3 info using node@v4.4.4
+4 verbose publish [ 'quick-survey-directive' ]
+5 silly cache add args [ 'quick-survey-directive', null ]
+6 verbose cache add spec quick-survey-directive
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: 'quick-survey-directive',
+7 silly cache add   scope: null,
+7 silly cache add   name: 'quick-survey-directive',
+7 silly cache add   rawSpec: '',
+7 silly cache add   spec: 'latest',
+7 silly cache add   type: 'tag' }
+8 silly addNamed quick-survey-directive@latest
+9 verbose addNamed "latest" is being treated as a dist-tag for quick-survey-directive
+10 info addNameTag [ 'quick-survey-directive', 'latest' ]
+11 silly mapToRegistry name quick-survey-directive
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry data Result {
+14 silly mapToRegistry   raw: 'quick-survey-directive',
+14 silly mapToRegistry   scope: null,
+14 silly mapToRegistry   name: 'quick-survey-directive',
+14 silly mapToRegistry   rawSpec: '',
+14 silly mapToRegistry   spec: 'latest',
+14 silly mapToRegistry   type: 'tag' }
+15 silly mapToRegistry uri https://registry.npmjs.org/quick-survey-directive
+16 verbose addNameTag registry:https://registry.npmjs.org/quick-survey-directive not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/quick-survey-directive
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 10:12:06 PM
+20 verbose request using bearer token for auth
+21 verbose request id 714b785b1d234f20
+22 http request GET https://registry.npmjs.org/quick-survey-directive
+23 http 404 https://registry.npmjs.org/quick-survey-directive
+24 verbose headers { 'content-type': 'application/json',
+24 verbose headers   'cache-control': 'max-age=0',
+24 verbose headers   'content-length': '2',
+24 verbose headers   'accept-ranges': 'bytes',
+24 verbose headers   date: 'Sun, 24 Jul 2016 03:12:04 GMT',
+24 verbose headers   via: '1.1 varnish',
+24 verbose headers   connection: 'keep-alive',
+24 verbose headers   'x-served-by': 'cache-dfw1820-DFW',
+24 verbose headers   'x-cache': 'MISS',
+24 verbose headers   'x-cache-hits': '0',
+24 verbose headers   'x-timer': 'S1469329924.806294,VS0,VE49',
+24 verbose headers   vary: 'Accept-Encoding' }
+25 silly get cb [ 404,
+25 silly get   { 'content-type': 'application/json',
+25 silly get     'cache-control': 'max-age=0',
+25 silly get     'content-length': '2',
+25 silly get     'accept-ranges': 'bytes',
+25 silly get     date: 'Sun, 24 Jul 2016 03:12:04 GMT',
+25 silly get     via: '1.1 varnish',
+25 silly get     connection: 'keep-alive',
+25 silly get     'x-served-by': 'cache-dfw1820-DFW',
+25 silly get     'x-cache': 'MISS',
+25 silly get     'x-cache-hits': '0',
+25 silly get     'x-timer': 'S1469329924.806294,VS0,VE49',
+25 silly get     vary: 'Accept-Encoding' } ]
+26 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/quick-survey-directive
+26 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+26 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+26 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+26 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:200:22)
+26 verbose stack     at emitTwo (events.js:87:13)
+26 verbose stack     at Request.emit (events.js:172:7)
+26 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+26 verbose stack     at emitOne (events.js:82:20)
+26 verbose stack     at Request.emit (events.js:169:7)
+26 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:988:12)
+27 verbose statusCode 404
+28 verbose pkgid quick-survey-directive
+29 verbose cwd /Users/ryanlesson/Documents/quick-survery-directive
+30 error Darwin 15.3.0
+31 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "quick-survey-directive"
+32 error node v4.4.4
+33 error npm  v3.9.2
+34 error code E404
+35 error 404 Registry returned 404 for GET on https://registry.npmjs.org/quick-survey-directive
+36 error 404
+37 error 404 'quick-survey-directive' is not in the npm registry.
+38 error 404 You should bug the author to publish it (or use the name yourself!)
+39 error 404 Note that you can also install from a
+40 error 404 tarball, folder, http url, or git url.
+41 verbose exit [ 1, true ]

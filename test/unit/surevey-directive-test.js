@@ -1,23 +1,24 @@
-describe('SurveyController', function() {
-	beforeEach(module('quickSurveyGenerator'));
+describe('Quick Survey Directive', function() {
+  var $compile,
+      $rootScope;
 
-	describe('setQuestionStruct()', function() {
-		it('should handle names correctly', inject(function($controller) {
-			var scope = {};
+  // Load the quickSureveyDirective module, which contains the directive
+  beforeEach(module('quickSurveyDirective'));
 
-			var SurveyController = $controller('SurveyController', {
-				$scope: scope
-			});
+  // Store references to $rootScope and $compile
+  // so they are available to all tests in this describe block
+  beforeEach(inject(function(_$compile_, _$rootScope_){
+    // The injector unwraps the underscores (_) from around the parameter names when matching
+    $compile = _$compile_;
+    $rootScope = _$rootScope_;
+  }));
 
-			scope.qSet = ['test', 'testing'];
-
-
-			scope.setQuestionStruct()
-
-			expect(scope.questions).to.deep.equal({
-				"1": {Q:'test', A: ''},
-				"2": {Q:'testing', A: ''}
-			})
-		}))
-	})
-})
+  it('currentQuestion starts at one', function() {
+    // Compile a piece of HTML containing the directive
+    var element = $compile("<survey ng-attr-questions = 'hello'></survey>")($rootScope);
+    // fire all the watches, so the scope expression {{1 + 1}} will be evaluated
+    $rootScope.$digest();
+    // Check that the compiled element contains the templated content
+    expect(element.html()).toContain("hello");
+  });
+});
