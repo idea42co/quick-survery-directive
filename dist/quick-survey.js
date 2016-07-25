@@ -1,11 +1,11 @@
-(function(){
+(function(angular){
 
 	angular.module('quickSurveyDirective', [])
 	.directive('survey', function(){
 
 		return {
 			restrict: "E",
-			templateUrl: "app/questions.html",
+			templateUrl: "dist/questions.html",
 			scope: {
 				questions: '='
 			},
@@ -75,7 +75,7 @@
 		}
 	})
 	
-}())
+}(angular))
 
 
 

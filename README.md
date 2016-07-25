@@ -25,14 +25,15 @@ An animated survey built with an Angular directive. Quicky build a survey with c
 
 - Initiate the survey by placing this custom html template:
 ```html
-    <survey ng-attr-questions = "questionSet></survey>
+    <survey ng-attr-questions = "questionSet"></survey>
 ```
 
 
 
 ##Saving to a database
-- To save to a databas simply set up a $watch on the $scope.questionSet and save to the database 
-everytime the answer is updated since it is two way bound.
+- To save to a database simply set up a $watch on the $scope.questionSet and save to the database 
+everytime the answer is updated since it is two way bound. This is also a good tool to use so you don't lose information
+on a page refresh.
 
 
 ##Custom Configuration

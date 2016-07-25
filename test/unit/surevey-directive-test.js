@@ -1,24 +1,19 @@
 describe('Quick Survey Directive', function() {
-  var $compile,
-      $rootScope;
+  var elm, scope;
 
-  // Load the quickSureveyDirective module, which contains the directive
-  beforeEach(module('quickSurveyDirective'));
+  beforeEach(module("quickSurveyDirective"));
+  beforeEach(module("my.templates"))
 
-  // Store references to $rootScope and $compile
-  // so they are available to all tests in this describe block
-  beforeEach(inject(function(_$compile_, _$rootScope_){
-    // The injector unwraps the underscores (_) from around the parameter names when matching
-    $compile = _$compile_;
-    $rootScope = _$rootScope_;
-  }));
+  beforeEach(inject(function($rootScope, $compile) {
 
-  it('currentQuestion starts at one', function() {
-    // Compile a piece of HTML containing the directive
-    var element = $compile("<survey ng-attr-questions = 'hello'></survey>")($rootScope);
-    // fire all the watches, so the scope expression {{1 + 1}} will be evaluated
-    $rootScope.$digest();
-    // Check that the compiled element contains the templated content
-    expect(element.html()).toContain("hello");
-  });
-});
+    scope = $rootScope;
+    $compile(elm)(scope);
+    scope.$digest();
+  }))
+
+  it('should have the scope elements defined', function() {
+    
+    expect(1).to.equal(1);
+  })
+
+})

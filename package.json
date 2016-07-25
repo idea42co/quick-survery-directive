@@ -2,7 +2,7 @@
   "name": "quick-survey-directive",
   "version": "1.0.0",
   "description": "An easy to use survey created with an Angular directive",
-  "main": "./app/app.js",
+  "main": "dist/quick-survey.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

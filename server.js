@@ -4,7 +4,7 @@ var path = require('path');
 var app = express();
 
 //let Express know that we are using these files
-app.use('/app', express.static(path.join(__dirname, '/app')))
+app.use('/dist', express.static(path.join(__dirname, '/dist')))
 app.use('/node_modules', express.static(path.join(__dirname, '/node_modules')))
 app.use('/bower_components', express.static(path.join(__dirname, '/bower_components')))
 
