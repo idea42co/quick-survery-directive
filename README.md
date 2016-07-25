@@ -15,7 +15,10 @@ Then include the following files:
 An animated survey built with an Angular directive. Quicky build a survey with cool animations and reponsiveness.
 
 ##Usage
-- To use just include `quickSurveyGenerator` as a dependency in your angualr module
+- To use just include `quickSurveyDirective` as a dependency in your angualar module
+```angular
+	angular.module('Example', ['quickSurveyDirective
+```
 
 ##Example UI
 ![alt text](https://github.com/idea42co/images/blob/master/Screen%20Shot%202016-07-21%20at%203.50.17%20PM.png)
