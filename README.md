@@ -1,4 +1,8 @@
-![alt text](https://github.com/idea42co/images/blob/master/FullLogo-Colored-2000x779.jpg "Logo Title Text 1")
+![idea42 logo](images/idea42logo.jpg)
+
+
+> [![npm version](https://badge.fury.io/js/quick-survey-directive.svg)](https://badge.fury.io/js/quick-survey-directive)
+
 
 #Installation
 
@@ -21,7 +25,7 @@ An animated survey built with an Angular directive. Quicky build a survey with c
 ```
 
 ##Example UI
-![alt text](https://github.com/idea42co/images/blob/master/Screen%20Shot%202016-07-21%20at%203.50.17%20PM.png)
+![screenshot](images/questions.png)
 
 - Define all questions within your controller in an array in this structure
 ```javascript
