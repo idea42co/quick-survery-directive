@@ -22,18 +22,19 @@ module.exports = function(config) {
         'karma-mocha',
         'karma-chai',
         'karma-phantomjs-launcher',
-        'karma-ng-html2js-preprocessor'
+        'karma-ng-html2js-preprocessor',
+        'karma-mocha-reporter'
     ],
 
 
     // list of files / patterns to load in the browser
     files: [
+      'bower_components/jquery/dist/jquery.min.js',
       'bower_components/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      'bower_components/jquery/dist/jquery.min.js',
       'test/**/*.js',
-      'app/*.js',
-      'app/**/*.js'
+      'dist/*.js',
+      'dist/**/*.js'
     ],
 
 
@@ -45,7 +46,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['mocha'],
 
 
     // web server port
@@ -81,15 +82,8 @@ module.exports = function(config) {
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-
     preprocessors: {
-      "**/*.html": ["ng-html2js"]
-    },
 
-    ngHtml2JsPreprocessor: {
-
-
-      moduleName: "my.templates"
     }
 
     

@@ -17,7 +17,7 @@
 										'<input ng-model = "answer"></input>' +
 									'</div>' +
 					'<div class="col-xs-2">' +
-						'<button ng-click = "nextQ(answer)"" class="btn next-btn">' +
+						'<button ng-click = "nextQ(answer)" class="btn next-btn" id = "submitnext">' +
 							'<i class="fa fa-arrow-right" aria-hidden="true"></i>' +
 									'</button>' +
 								'</div>' +
@@ -52,7 +52,8 @@
 
 				$scope.display = $scope.questions[$scope.currentQuestion - 1];
 
-				$scope.numOfQuestions = $scope.questions.length
+				$scope.numOfQuestions = $scope.questions.length 
+
 
 				$scope.nextQ = function(answer){
 

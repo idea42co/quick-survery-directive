@@ -4,7 +4,7 @@
   "description": "An easy to use survey created with an Angular directive",
   "main": "./dist/quick-survey.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "karma start",
     "start": "node server.js"
   },
   "licenses": [
@@ -27,6 +27,7 @@
     "karma": "^1.1.1",
     "karma-chai": "^0.1.0",
     "karma-mocha": "^1.1.1",
+    "karma-mocha-reporter": "^2.1.0",
     "karma-ng-html2js-preprocessor": "^1.0.0",
     "karma-phantomjs-launcher": "^1.0.1",
     "mocha": "^2.5.3"
