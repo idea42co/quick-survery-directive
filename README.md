@@ -7,7 +7,7 @@
 #Installation
 
 ```sh
-npm install quick-survey-generator
+npm install quick-survey-directive
 ```
 Then include the following files:
 ```html
