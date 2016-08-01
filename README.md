@@ -45,14 +45,11 @@ An animated survey built with an Angular directive. Quicky build a survey with c
 
 
 ##Saving to a database
-- To save to a database simply set up a $watch on the $scope.questionSet and save to the database 
-everytime the answer is updated since it is two way bound. This is also a good tool to use so you don't lose information
+- To save to a database simply set up a `$watch` on the `$scope.questionSet` and save to the database 
+everytime the answer is updated since it is two way bound. This is also a good method to use so you don't lose information
 on a page refresh.
 
 
 ##Custom Configuration
-- All styling custom configuration can be found in the `main.css`file in the app folder
-
-##Testing
-- While this project was created in a short amount of time, tests haven't fully been written yet. However, I hope to have them done in the next week or so!
+- All styling custom configuration can be found in the `main.css` file in the app folder
 
