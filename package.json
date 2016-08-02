@@ -1,6 +1,6 @@
 {
   "name": "quick-survey-directive",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "An easy to use survey created with an Angular directive",
   "main": "./dist/quick-survey.js",
   "scripts": {
