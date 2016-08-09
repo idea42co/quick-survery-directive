@@ -57,7 +57,7 @@ input {
 	transition: all 200ms ease-out;
 }
 
-.next-btn:focus, .next-btn:hover {
+.next-btn:hover {
 	color: white;
 	outline: none;
 	background-color: transparent;
