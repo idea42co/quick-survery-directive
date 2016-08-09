@@ -33,7 +33,7 @@
 							'</div>' +
 
 							'<div ng-show = "complete" class = "play-again">'+
-								'<div class = "btn btn-primary" ng-click = "playAgain()">Restart</div>' +
+								'<div id = "play-again" class = "btn btn-primary" ng-click = "playAgain()">Restart</div>' +
 							'</div>'+
 
 							'<div ng-show = "empty" class = "empty">' +

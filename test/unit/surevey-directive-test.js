@@ -61,5 +61,29 @@ describe('Quick Survey Directive', function() {
     expect(grabbedScope.complete).to.be.true
  })
 
+ describe('Play Again', function() {
+   it('Completed should be false when play again is clicked', function() {
+      el.find('button').triggerHandler('click');
+      el.find('button').triggerHandler('click');
+
+     el.find('#play-again').triggerHandler('click');
+
+     expect(grabbedScope.complete).to.be.false;
+   })
+
+   it('Display should be reset to first question', function() {
+      el.find('button').triggerHandler('click');
+      el.find('button').triggerHandler('click');
+
+      el.find('#play-again').triggerHandler('click');
+
+      expect(grabbedScope.display.Q).to.eq('test1');
+
+   })
+
+  
+ })
+
+
 })
 
