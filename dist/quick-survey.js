@@ -32,6 +32,10 @@
 								'<div class="progress-bar"></div>' +
 							'</div>' +
 
+							'<div ng-show = "complete" class = "play-again">'+
+								'<div class = "btn btn-primary" ng-click = "playAgain()">Restart</div>' +
+							'</div>'+
+
 							'<div ng-show = "empty" class = "empty">' +
 								'<div class = "col-xs-12"><h1>Please fill out some questions</h1></div>' +
 							'</div>'+
@@ -87,6 +91,13 @@
 					Animation.animate(progressBar);
 				}
 
+				$scope.playAgain = function() {
+					$scope.complete = false;
+					$scope.currentQuestion = 1;
+					$scope.display = $scope.questions[$scope.currentQuestion - 1];
+					Animation.reset();
+				}
+
 			}]
 		}
 	})
@@ -106,6 +117,12 @@
 
 		this.progress = function(numOfQuestions){
 			return 100 / numOfQuesitons
+		}
+
+		this.reset = function() {
+			$('.progress-bar').animate({
+		  	 'marginLeft' : '-=100' + "%"
+			 });
 		}
 	})
 	

@@ -25,6 +25,10 @@ h1 {
 	text-align: center;
 }
 
+.play-again {
+	text-align: center;
+}
+
 .empty h1 {
 	text-align: center;
 	font-size: 18px;
